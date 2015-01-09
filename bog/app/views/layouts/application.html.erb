@@ -2,17 +2,20 @@
 <html>
 <head>
   <title>Bog</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Bog Adventure App</h1>
-<p><strong>Navigation:</strong> <a href='/index'>Home</a> | <a href='/creatures'>Creatures</a> | <a href='creatures/new'>Add a Creature</a> | <a href='/google'>Google</a></p>
+<div class='container'>
+  <h1>Bog Adventure App</h1>
+  <p><a href='/'>Home</a> | <a href='creatures/new'>Add a Creature</a> | <a href='/google'>Google</a></p>
+
 
 <hr>
-<br>
 <%= yield %>
+</div>
 <br>
 <hr>
 

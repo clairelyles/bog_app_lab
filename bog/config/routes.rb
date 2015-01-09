@@ -6,12 +6,7 @@ Rails.application.routes.draw do
   root 'creatures#index'
 
   # Example of regular route:
-  get 'index' => 'creatures#index'
-  get 'creatures' => 'creatures#creatures'
-  # 'creatures#create' --> where create is the method for the post!
-  get 'creatures/new' => 'creatures#new'
-  get 'creatures/:id' => 'creatures#show'
-  post 'creatures' => 'creatures#creatures'
+  resources :creatures
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

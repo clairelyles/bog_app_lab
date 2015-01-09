@@ -1,11 +1,15 @@
 class CreaturesController < ApplicationController
 
-  def creatures
+  def index
     @creatures = Creature.all
   end
 
+  def show
+    @creature = Creature.find(params[:id])
+  end
+
   def new
-    @creatures = Creature.new
+
   end
 
   def create
@@ -13,6 +17,7 @@ class CreaturesController < ApplicationController
     creature = Creature.create(creature)
     redirect_to = "/creatures"
   end
+
 
 
 end

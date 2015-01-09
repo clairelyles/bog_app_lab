@@ -1,4 +1,3 @@
 <h2>The Creature you've selected is:</h2>
-<% @creatures.each do |creature| %>
-  <li><b><%= creature.name %></a></b>: <%= creature.desc %></li>
-<% end %>
+<strong>Name:</strong> <%= @creature.name %><br>
+<strong>Description:</strong> <%= @creature.desc %>
