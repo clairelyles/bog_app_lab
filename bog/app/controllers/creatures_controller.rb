@@ -9,10 +9,19 @@ class CreaturesController < ApplicationController
   end
 
   def create
-    render json: params
-    # @creature = Creature.new(params.require(:creature).permit(:name, :desc))
-    # creature = Creature.create(creature)
-    # redirect_to = "/creatures"
+    # Check the JSON data thats getting passed through
+    #render json: params
+
+    # new method
+    @creature = Creature.new
+    @creature.name = params[:creature][:name]
+    @creature.desc = params[:creature][:desc]
+    @creature.save
+    redirect_to creatures_path
+
+    # create method
+    # Creature.create(create_params)
+    # redirect_to creatures_path
   end
 
   def show
